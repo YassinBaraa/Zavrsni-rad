@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+resource/semantic_segmentation
+semantic_segmentation/__init__.py
+semantic_segmentation/segmentation_node.py
+semantic_segmentation.egg-info/PKG-INFO
+semantic_segmentation.egg-info/SOURCES.txt
+semantic_segmentation.egg-info/dependency_links.txt
+semantic_segmentation.egg-info/entry_points.txt
+semantic_segmentation.egg-info/requires.txt
+semantic_segmentation.egg-info/top_level.txt
+semantic_segmentation.egg-info/zip-safe

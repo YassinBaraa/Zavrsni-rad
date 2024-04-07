@@ -1,0 +1,18 @@
+[0.584s] Invoking command in '/root/ros2_ws/build/semantic_segmentation': PYTHONPATH=/root/ros2_ws/build/semantic_segmentation/prefix_override:/root/ros2_ws/install/semantic_segmentation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /root/ros2_ws/build/semantic_segmentation/build --no-deps symlink_data
+[0.827s] running develop
+[0.828s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.828s]   warnings.warn(
+[0.981s] running egg_info
+[0.981s] writing semantic_segmentation.egg-info/PKG-INFO
+[0.981s] writing dependency_links to semantic_segmentation.egg-info/dependency_links.txt
+[0.981s] writing entry points to semantic_segmentation.egg-info/entry_points.txt
+[0.982s] writing requirements to semantic_segmentation.egg-info/requires.txt
+[0.982s] writing top-level names to semantic_segmentation.egg-info/top_level.txt
+[0.984s] reading manifest file 'semantic_segmentation.egg-info/SOURCES.txt'
+[0.984s] writing manifest file 'semantic_segmentation.egg-info/SOURCES.txt'
+[0.985s] running build_ext
+[0.985s] Creating /root/ros2_ws/install/semantic_segmentation/lib/python3.10/site-packages/semantic-segmentation.egg-link (link to .)
+[0.986s] 
+[0.986s] Installed /root/ros2_ws/build/semantic_segmentation
+[0.986s] running symlink_data
+[1.007s] Invoked command in '/root/ros2_ws/build/semantic_segmentation' returned '0': PYTHONPATH=/root/ros2_ws/build/semantic_segmentation/prefix_override:/root/ros2_ws/install/semantic_segmentation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /root/ros2_ws/build/semantic_segmentation/build --no-deps symlink_data
