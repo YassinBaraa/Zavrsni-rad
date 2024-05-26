@@ -5,3 +5,6 @@ Krajnji cilj: Pokrenuti semantičku segmentaciju na mobilnom robotu za strukturi
 
 
 Kratki sadržaj: U sklopu zadatka potrebno je istražiti i pregledati postojeće istraživačko područje detekcije i segmentacije predmeta u okolini. Potrebno je odabrati podskup najčešćih značajki u strukturiranoj okolini mobilnog robota, za koji će se izgraditi balansirani skup podataka temeljen na sintetskim i automatski anotiranim podacima. Potrebno je istrenirati kombinaciju neuronskih mreža koji će moći robusno segmentirati značajke iz okoline u svrhu lociranja istih u prostoru. Algoritam je potrebno ispitati u simulacijskom okruženju.
+
+
+https://www.overleaf.com/project/661d9bbe0d8c5345657a901f
