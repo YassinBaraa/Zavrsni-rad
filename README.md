@@ -8,3 +8,4 @@ Kratki sadržaj: U sklopu zadatka potrebno je istražiti i pregledati postojeće
 
 
 https://www.overleaf.com/project/661d9bbe0d8c5345657a901f
+https://drive.google.com/drive/folders/1imU0zVsAxYIfEb4xZUkhsx1Qoar30BlJ?usp=drive_link
