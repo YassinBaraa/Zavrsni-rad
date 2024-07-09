@@ -8,7 +8,7 @@ import torch
 import torchvision.transforms as transforms
 from transformers import SegformerImageProcessor, SegformerForSemanticSegmentation
 from numpy import asarray
-from .utils import color_map
+from utils import color_map
 import time
 
 class SegmentationNode(Node):
@@ -19,13 +19,15 @@ class SegmentationNode(Node):
         self.subscription = self.create_subscription(Image, '/camera1/image_raw', self.listener_callback, 1)
 
         self.processor = SegformerImageProcessor.from_pretrained("nvidia/segformer-b0-finetuned-ade-512-512")
-        self.model = SegformerForSemanticSegmentation.from_pretrained("nvidia/segformer-b0-finetuned-ade-512-512")
+        self.device = torch.device("cuda")
+        self.model = SegformerForSemanticSegmentation.from_pretrained("nvidia/segformer-b0-finetuned-ade-512-512", device_map = 'cuda')
         self.model.eval()
 
         self.preprocess = transforms.Compose([
             transforms.Resize((1024, 1024)),  
             transforms.Lambda(lambda img: img.convert('RGB')),  
             transforms.ToTensor(),  
+            #transforms.cuda.ToTensor(),
         ])
        
         self.bridge = CvBridge()
@@ -43,6 +45,7 @@ class SegmentationNode(Node):
         self.cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding="passthrough")
         image = PILImage.fromarray(self.cv_image)
         input_tensor = self.preprocess(image).unsqueeze(0)
+        input_tensor =input_tensor.cuda()
         with torch.no_grad():
             outputs = self.model(input_tensor)
         self.predicted_masks = torch.argmax(outputs.logits, dim=1).squeeze().cpu().numpy()
